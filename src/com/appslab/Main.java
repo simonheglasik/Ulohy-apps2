@@ -1,6 +1,7 @@
 package com.appslab;
 
 import java.util.Random;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
@@ -15,12 +16,17 @@ public class Main {
         var goldenWatch = new Item("Golden Watch",40);
         var hat = new Item("Nice looking hat",30);
 
+        var in = new Scanner(System.in);
         ivan.addItem(sock);
         ivan.addItem(goldenWatch);
         pista.addItem(liquor);
         pista.addItem(hat);
         while (true)
-            fight(ivan,pista);
+        {
+            fight(ivan, pista);
+            System.out.println("Press enter to see next fight");
+            in.nextLine();
+        }
     }
     public static void fight(warrior one,warrior two)
     {
@@ -33,12 +39,21 @@ public class Main {
         double twoChance = 100 - oneChance;
 
         System.out.println(one.getName() + " is standing aginst " + two.getName());
+
+        int fight = rnd.nextInt(100);
+        if(one.getLife() == 0)
+        {
+            System.out.println(one.getName() + " is dead");
+            return;
+        }
+        if(two.getLife() == 0)
+        {
+            System.out.println(two.getName() + " is dead");
+            return;
+        }
         System.out.println("Total force of " + one.getName() + " is " + oneTotal);
         System.out.println("Total force of " + two.getName() + " is " + twoTotal);
         System.out.println(".....................................................");
-
-        int fight = rnd.nextInt(100);
-
         if(fight < oneChance)
         {
             var loot = new Item();
