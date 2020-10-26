@@ -1,8 +1,23 @@
 package com.appslab;
 
-public class Main {
+import java.util.ArrayList;
 
-    public static void main(String[] args) {
-        System.out.println("Hello AppsLab 2020! haa");
+public class Main
+{
+
+    public static void main(String[] args)
+    {
+        var list = new ArrayList<Integer>();
+        list.add(1);
+        addIfNotExists(list,2);
+        System.out.println(list);
+    }
+    public static void addIfNotExists(ArrayList<Integer> list , int number)
+    {
+        if(!list.contains(number))
+        {
+            list.add(number);
+        }
     }
 }
+
