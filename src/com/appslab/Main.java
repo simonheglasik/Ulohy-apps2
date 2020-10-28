@@ -6,10 +6,17 @@ public class Main {
 
     public static void main(String[] args)
     {
-        System.out.println("Hello AppsLab 2020! haa");
+        var list = new ArrayList<Integer>();
+        for(int i = 0 ; i < 5; i++)
+            list.add(i);
+        System.out.println(multipleByLenght(list));
     }
-    public static void multipleByLenght(ArrayList<Integer> list)
+    public static ArrayList<Integer> multipleByLenght(ArrayList<Integer> list)
     {
-        list.stream().forEach(n -> n *= 2);
+        var returnList = new ArrayList<Integer>();
+        list.stream().forEach(n -> {
+            returnList.add((int) (n.longValue() * list.size()));
+        });
+        return returnList;
     }
 }
