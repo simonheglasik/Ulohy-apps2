@@ -1,6 +1,9 @@
 package com.appslab;
 
 import java.util.ArrayList;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -13,11 +16,6 @@ public class Main {
     }
     public static void printEven(ArrayList<Integer> list)
     {
-        var returnList = new ArrayList<Integer>();
-        list.forEach(n -> {
-            if(n % 2 == 0)
-                returnList.add(n);
-        });
-        System.out.println(returnList);
+        System.out.println(list.stream().filter(n -> n % 2 == 0).collect(Collectors.toCollection(ArrayList::new)).toString());
     }
 }
