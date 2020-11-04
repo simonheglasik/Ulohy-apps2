@@ -1,6 +1,7 @@
 package com.appslab;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -13,10 +14,6 @@ public class Main {
     }
     public static ArrayList<Integer> multipleByLenght(ArrayList<Integer> list)
     {
-        var returnList = new ArrayList<Integer>();
-        list.stream().forEach(n -> {
-            returnList.add((int) (n.longValue() * list.size()));
-        });
-        return returnList;
+        return list.stream().map(n -> n * list.size()).collect(Collectors.toCollection(ArrayList::new));
     }
 }
