@@ -5,6 +5,7 @@ public class job
     public enum type
     {
         programmer,
+        driver,
         teacher;
     }
     protected type jobType;

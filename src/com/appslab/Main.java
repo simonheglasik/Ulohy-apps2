@@ -1,11 +1,17 @@
 package com.appslab;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args)
     {
         var pro = new Programmer(1500, 300);
         var teach = new Teacher(1000, 200);
-        System.out.println(pro.getInfo() + " and " + teach.getInfo());
+        var driver = new Driver(700,300);
+        var list = Arrays.asList(pro,teach,driver);
+        list.forEach(n -> System.out.println(n.getInfo()));
     }
 }
