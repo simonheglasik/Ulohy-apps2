@@ -8,4 +8,9 @@ public class Programmer extends job
         this.bonus = bonus;
         this.jobType = type.programmer;
     }
+     @Override
+     protected String getInfo()
+    {
+        return jobType + "'s salary is " + (salary + bonus);
+    }
 }
