@@ -1,7 +1,7 @@
 package com.appslab;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
+import com.appslab.model.*;
+
 import java.util.Arrays;
 
 public class Main {
@@ -12,6 +12,7 @@ public class Main {
         var teach = new Teacher(1000, 200);
         var driver = new Driver(700,300);
         var list = Arrays.asList(pro,teach,driver);
-        list.forEach(n -> System.out.println(n.getInfo()));
+        var srvs = new EmployeeServiceImpl();
+        System.out.println(srvs.sumAllSalaries(list) + " " + srvs.sumAllBunuses(list));
     }
 }

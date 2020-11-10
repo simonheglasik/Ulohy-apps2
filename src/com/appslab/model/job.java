@@ -1,4 +1,4 @@
-package com.appslab;
+package com.appslab.model;
 
 public class job
 {
@@ -11,7 +11,20 @@ public class job
     protected type jobType;
     protected float salary;
     protected int bonus;
-    protected String getInfo()
+
+    public type getJobType() {
+        return jobType;
+    }
+
+    public float getSalary() {
+        return salary;
+    }
+
+    public int getBonus() {
+        return bonus;
+    }
+
+    public String getInfo()
     {
         return jobType + "'s" + " salary is " + salary + " and bonus is " + bonus;
     }

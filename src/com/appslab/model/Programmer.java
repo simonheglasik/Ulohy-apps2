@@ -1,4 +1,6 @@
-package com.appslab;
+package com.appslab.model;
+
+import com.appslab.model.job;
 
 public class Programmer extends job
 {
@@ -9,7 +11,7 @@ public class Programmer extends job
         this.jobType = type.programmer;
     }
      @Override
-     protected String getInfo()
+     public String getInfo()
     {
         return jobType + "'s salary is " + (salary + bonus);
     }

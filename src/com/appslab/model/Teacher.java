@@ -1,4 +1,6 @@
-package com.appslab;
+package com.appslab.model;
+
+import com.appslab.model.job;
 
 public class Teacher extends job
 {
