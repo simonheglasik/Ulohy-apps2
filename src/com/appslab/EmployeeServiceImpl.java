@@ -1,4 +1,7 @@
-package com.appslab.model;
+package com.appslab;
+
+import com.appslab.EmployeeService;
+import com.appslab.model.job;
 
 import java.util.List;
 

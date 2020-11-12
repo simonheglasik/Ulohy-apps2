@@ -1,4 +1,6 @@
-package com.appslab.model;
+package com.appslab;
+
+import com.appslab.model.job;
 
 import java.util.ArrayList;
 import java.util.List;
