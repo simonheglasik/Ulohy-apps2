@@ -15,7 +15,6 @@ public class Main {
 
     public static void addElement(String key, int value, HashMap<String, Integer> map)
     {
-        if(!map.keySet().contains(key))
-            map.put(key,value);
+        map.putIfAbsent(key,value);
     }
 }
