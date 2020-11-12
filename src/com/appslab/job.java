@@ -2,17 +2,16 @@ package com.appslab;
 
 public class job
 {
-    public enum type
-    {
-        programmer,
-        driver,
-        teacher;
-    }
-    protected type jobType;
+    protected Type jobType;
     protected float salary;
     protected int bonus;
+    job(float salary , int bonus)
+    {
+        this.salary = salary;
+        this.bonus = bonus;
+    }
     protected String getInfo()
     {
-        return jobType + "'s" + " salary is " + salary + " and bonus is " + bonus;
+        return jobType.getJobName() + "'s" + " salary is " + salary + " and bonus is " + bonus;
     }
 }

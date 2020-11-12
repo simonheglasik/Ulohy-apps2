@@ -4,8 +4,7 @@ public class Programmer extends job
 {
     public Programmer(float salary , int bonus)
     {
-        this.salary = salary;
-        this.bonus = bonus;
-        this.jobType = type.programmer;
+        super(salary, bonus);
+        this.jobType = Type.PROGRAMMER;
     }
 }
